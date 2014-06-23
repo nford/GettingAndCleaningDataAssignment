@@ -36,3 +36,5 @@ merged <- merge(test,train,all=TRUE)
 
 # aggregate
 tidy <- aggregate(.~subject+activity, FUN=mean, data=merged)
+
+write.table(tidy, "output.txt")
